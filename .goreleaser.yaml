@@ -21,11 +21,6 @@ builds:
       - -X main.version={{.Version}}
       - -X main.commit={{.Commit}}
       - -X main.date={{.Date}}
-    hooks:
-      post:
-        - cmd: make pack-bin
-          env:
-            - BIN={{ .Path }}
 
 archives:
   - format: tar.gz
